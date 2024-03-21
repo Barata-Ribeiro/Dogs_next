@@ -1,6 +1,4 @@
 :root {
-  --type-first: Helvetica, Arial, sans-serif;
-  --type-second: 'Spectral', georgia;
   --main-color: #fb1;
   --main-support-color: ##764701;
   --secondary-color: #fea;
@@ -18,6 +16,9 @@
 }
 
 body {
+  --type-first: Helvetica, Arial, sans-serif;
+  --type-second: var(--type-second-spectral), georgia;
+
   margin: 0;
   padding-top: 4rem;
   color: var(--neutral-color);

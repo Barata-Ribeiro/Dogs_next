@@ -1,3 +1,4 @@
+import { type_second } from '@/functions/fonts';
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -13,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR'>
-      <body>{children}</body>
+      <body className={type_second.variable}>{children}</body>
     </html>
   );
 }
