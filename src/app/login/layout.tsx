@@ -8,7 +8,7 @@ export default async function LoginLayout({
 }) {
   return (
     <section className={styles.login}>
-      <div className={styles.forms}>{children}</div>
+      <aside className={styles.forms}>{children}</aside>
     </section>
   );
 }
