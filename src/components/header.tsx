@@ -1,11 +1,10 @@
 import userGet from '@/actions/user-get';
-import { User } from '@/interfaces/user';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './header.module.css';
 
 export default async function Header() {
-  const { data } = (await userGet()) as { data: User };
+  const { data } = await userGet();
 
   return (
     <header className={styles.header}>

@@ -1,5 +1,7 @@
+import { User } from '@/interfaces/user';
+
 export interface State {
   ok: boolean;
   error: string;
-  data: string | null;
+  data: User | null;
 }
