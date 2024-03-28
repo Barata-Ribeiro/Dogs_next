@@ -3,6 +3,8 @@
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
+import logout from '@/actions/logout';
+import { useUser } from '@/context/user-context';
 import useMedia from '@/hooks/use-media';
 import AdicionarIcon from '@/icons/adicionar-icon';
 import EstatisticasIcon from '@/icons/estatisticas-icon';
@@ -31,8 +33,10 @@ export default function ContaHeader() {
     setMobileMenu(false);
   }, [pathname]);
 
-  function handleLogout() {
-    // TODO...
+  const { setUser } = useUser();
+  async function handleLogout() {
+    await logout();
+    setUser(null);
   }
 
   return (
