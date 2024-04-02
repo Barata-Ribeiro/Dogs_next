@@ -1,3 +1,5 @@
+import { PhotosGet } from '@/interfaces/photo';
+
 export const API_URL = 'https://dogsapi.origamid.dev/json';
 
 export const TOKEN_POST = () => {
@@ -20,8 +22,8 @@ export const PHOTO_POST = () => {
   return `${API_URL}/api/photo`;
 };
 
-export const PHOTOS_GET = () => {
-  return `${API_URL}/api/photo`;
+export const PHOTOS_GET = ({ page, total, user }: PhotosGet) => {
+  return `${API_URL}/api/photo/?_page=${page}&_total=${total}&_user=${user}`;
 };
 
 export const PHOTO_GET = (id: string) => {

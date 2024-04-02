@@ -13,3 +13,15 @@ export interface Photo {
 export interface Photos {
   photos: Photo[];
 }
+
+export interface PhotosGetParams {
+  page?: number;
+  total?: number;
+  user?: 0 | string;
+}
+
+export interface PhotosGet {
+  page: number;
+  total: number;
+  user: 0 | string;
+}
