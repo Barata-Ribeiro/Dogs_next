@@ -12,6 +12,7 @@ export interface Photo {
 
 export interface Photos {
   photos: Photo[];
+  user?: 0 | string;
 }
 
 export interface PhotosGetParams {

@@ -15,7 +15,7 @@ export default async function ContaPage() {
   return (
     <section>
       {photos?.length ? (
-        <Feed photos={photos} />
+        <Feed photos={photos} user={user?.username} />
       ) : (
         <span>
           <p style={{ color: '#444', fontSize: '1.25rem', marginBottom: '1rem' }}>

@@ -4,15 +4,15 @@ import { PHOTOS_GET } from '@/functions/api';
 import apiError from '@/functions/api-error';
 import { Photo, PhotosGetParams } from '@/interfaces/photo';
 
-export default async function photosGet({
-  page = 1,
-  total = 6,
-  user = 0,
-}: PhotosGetParams = {}) {
+export default async function photosGet(
+  { page = 1, total = 6, user = 0 }: PhotosGetParams = {},
+  optionsFetch?: RequestInit
+) {
   try {
+    const options = optionsFetch || { next: { revalidate: 10, tags: ['photos'] } };
     const URL = PHOTOS_GET({ page, total, user });
 
-    const response = await fetch(URL, { next: { revalidate: 10, tags: ['photos'] } });
+    const response = await fetch(URL, options);
 
     const data = (await response.json()) as Photo[];
 
