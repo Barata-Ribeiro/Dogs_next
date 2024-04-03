@@ -14,9 +14,9 @@ export default async function photosGet(
 
     const response = await fetch(URL, options);
 
-    const data = (await response.json()) as Photo[];
-
     if (!response.ok) throw new Error('Erro ao buscar as fotos.');
+    
+    const data = (await response.json()) as Photo[];
 
     return { data, ok: true, error: '' };
   } catch (error) {
