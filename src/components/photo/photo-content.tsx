@@ -1,5 +1,6 @@
 'use client';
 
+import PhotoComments from '@/components/photo/photo-comments';
 import PhotoDelete from '@/components/photo/photo-delete';
 import { useUser } from '@/context/user-context';
 import { PhotoData } from '@/interfaces/photo';
@@ -38,11 +39,13 @@ const PhotoContent = ({ data, single }: { data: PhotoData; single: boolean }) =>
           </h1>
           <ul className={styles.attributes}>
             <li>{photo.peso} Kg</li>
-            <li>{photo.idade === '1' ? `${photo.idade} ano` : `${photo.idade} anos`}</li>
+            <li>
+              {photo.idade === '1' ? `${photo.idade} ano` : `${photo.idade} anos`}
+            </li>
           </ul>
         </div>
       </div>
-      {/* <PhotoComments single={single} id={photo.id} comments={comments} /> */}
+      <PhotoComments single={single} id={photo.id} comments={comments} />
     </div>
   );
 };
