@@ -8,13 +8,21 @@ Like Instagram, but purely for dogs, users can create an account, post pictures 
 
 ## 👨‍💻 Demo
 
-_Demo to be added..._
+![Dogs Next](./public/assets/screenshot.gif)
+
 Default login > user: dog / pw:dog
 Api resets periodically, so don't expect your account or posts to remain...
 
 ## 🚀 Built With
 
-_To be added..._
+This project leverages the following core dependencies:
+
+- [Next.js](https://nextjs.org/) - React framework for production
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [Sharp](https://sharp.pixelplumbing.com/) - High-performance image processing for Node.js
+- [Victory](https://formidable.com/open-source/victory/) - React components for modular charting and data visualization
+- [JOSE](https://github.com/panva/jose) - An implementation of JOSE (JWT, JWE, JWS, JWK) for Node.js
+
 
 ## 📚 Features
 
